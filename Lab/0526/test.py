@@ -5,7 +5,9 @@ import requests
 # 2	2
 # 3	4
 # f = open(r"19720212203789.txt", "rb")  # 提交的结果以自己的学号命名
-f = open(r"19720212203789.txt", "rb")  # 提交的结果以自己的学号命名
+f = open(
+    r"outputs/ConvNeXtTiny_ArcFace_results.txt", "rb"
+)  # 提交的结果以自己的学号命名
 files = {"file": f}
 r = requests.post(
     url="http://101.34.251.69:5005/detectfile", files=files
